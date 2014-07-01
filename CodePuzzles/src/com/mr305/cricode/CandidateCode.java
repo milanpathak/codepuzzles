@@ -108,7 +108,7 @@ public class CandidateCode {
 				}
 			
 			}
-		}
+		} 
 		return noOfWays;
 	}
 	public static void main(String[] args) {
