@@ -1,3 +1,11 @@
+/**
+ * Here m X n grid is given. Non-zero number specifies time to cross that street.
+ * We have to find shortest path to travel from (0,0) cell to (m,n) cell
+ * 
+ * @auther mpathak
+ * */
+ 
+ 
 package com.mr305.cricode;
 
 public class CandidateCode {
