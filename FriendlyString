@@ -1,0 +1,65 @@
+package arraysandstrings;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.HashMap;
+
+public class FriendlyString {
+
+	public static void main(String[] args) throws NumberFormatException,
+			IOException {
+		String[] input = { "car", "cheating", "dale", "deal", "lead",
+				"teaching", "silent", "listen" };
+		input = friendlyWords(input);
+		for(int i=0; i<input.length; i++){
+			System.out.println(input[i]);
+		}
+
+	}
+
+	static String[] friendlyWords(String[] input) {
+		int size = input.length;
+		String[] resultArr = new String[size];
+		String[] sortedInput = new String[size];
+		for (int i = 0; i < size; i++) {
+			String inputI = input[i];
+			char[] tempArr = inputI.toCharArray();
+			Arrays.sort(tempArr);
+			String temp = new String(tempArr);
+			sortedInput[i] = temp;
+		}
+		HashMap<String, String> resultMap = new HashMap<String, String>();
+		String resultOp = null;
+		int k = 0;
+		for (int i = 0; i < size; i++) {
+			String temp = sortedInput[i];
+			for (int j = i + 1; j < size; j++) {
+				//if (temp.equals(sortedInput[j])) {
+				if (!resultMap.containsKey(temp) || null!=resultOp) {
+					resultOp = (null!=resultOp)? resultOp : input[i];
+					//if (!resultMap.containsKey(temp)) {
+					if (temp.equals(sortedInput[j])) {
+						resultMap.put(temp, input[i]);
+						resultOp = resultOp + " " + input[j];
+						// System.out.print(resultOp);
+					}
+
+				}
+			}
+			if (resultOp != null && resultOp.contains(" ")) {
+				resultArr[k] = resultOp;
+				k++;
+			}
+			resultOp = null;
+		}
+		String [] finalResultArr = new String[k];
+		for(int i=0; resultArr[i]!=null; i++){
+			finalResultArr[i] = resultArr[i];
+		}
+		return finalResultArr;
+	}
+
+}
