@@ -12,7 +12,11 @@
  * 
  * input :
  * int [] i1  = {4,6}; size of the matrix/grid
- * int [] i2 = {1,3,0,0,0,0,0,0,4,5,1,0,0,0,0,6,7,6,0,0,0,0,5,0};
+ * int [] i2 = {1,3,0,0,0,0,
+ * 		0,0,4,5,1,0,
+ * 		0,0,0,6,7,6,
+ * 		0,0,0,0,5,0};
+ * output : 3 // there are 3 ways when we reach 7.
  * @auther mpathak
  * */
  
