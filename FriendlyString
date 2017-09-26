@@ -1,3 +1,11 @@
+/**
+ * "dale" and "deal" are friendly strings as they have same number of same charecters.
+ * As an input we are given a list of Strings
+ * output should contain the list of Strings that are Friendly Strings.
+ * Sample input :"car", "cheating", "dale", "deal", "lead","teaching", "silent", "listen" 
+ * output : ""cheating", "dale", "deal", "lead","teaching", "silent", "listen" 
+ */
+
 package arraysandstrings;
 
 import java.io.BufferedReader;
