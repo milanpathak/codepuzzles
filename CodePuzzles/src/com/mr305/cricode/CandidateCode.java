@@ -1,6 +1,14 @@
 /**
  * Here m X n grid is given. Non-zero number specifies time to cross that street.
- * We have to find shortest path to travel from (0,0) cell to (m,n) cell
+ * We have to find number of paths available from (0,0) cell to (m,n) cell
+ * below are the conditions that says what is the next path based on the number in the grid.
+ * if Cell(i,j) == 1, it can go only towards right
+ * == 2, can go downwards
+ * == 3, can go diagonally donwnwards
+ * == 4, can go to right or downwards
+ * == 5, can go to right or diagonally donwnwards
+ * == 6, can go to downwards or diagonally donwnwards
+ * == 6, can go to right or downwards or diagonally donwnwards
  * 
  * @auther mpathak
  * */
