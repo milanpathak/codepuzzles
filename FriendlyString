@@ -44,25 +44,25 @@ public class FriendlyString {
 		int k = 0;
 		for (int i = 0; i < size; i++) {
 			String temp = sortedInput[i];
+			// We will compare arrayElement with the rest of elements to check its Friendly String
 			for (int j = i + 1; j < size; j++) {
-				//if (temp.equals(sortedInput[j])) {
 				if (!resultMap.containsKey(temp) || null!=resultOp) {
 					resultOp = (null!=resultOp)? resultOp : input[i];
-					//if (!resultMap.containsKey(temp)) {
 					if (temp.equals(sortedInput[j])) {
 						resultMap.put(temp, input[i]);
-						resultOp = resultOp + " " + input[j];
-						// System.out.print(resultOp);
+						resultOp = resultOp + " " + input[j];						
 					}
 
 				}
 			}
+			//Only Friendly String will be added to resultArr. 
 			if (resultOp != null && resultOp.contains(" ")) {
 				resultArr[k] = resultOp;
 				k++;
 			}
 			resultOp = null;
 		}
+		//resultArr is of larger length. We'll create a new array without null elements 
 		String [] finalResultArr = new String[k];
 		for(int i=0; resultArr[i]!=null; i++){
 			finalResultArr[i] = resultArr[i];
